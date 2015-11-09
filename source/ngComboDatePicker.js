@@ -176,10 +176,10 @@ angular.module("ngComboDatePicker", [])
         },
         template: function() {
             var html =
-                '<select ng-model="date" ng-change="onChange(\'date\')" ng-options="date for date in dates"></select>' +
-                '<select ng-model="month" ng-change="onChange(\'month\')" ng-options="month.index as month.name for month in months"></select>' +
-                '<select ng-model="year" ng-change="onChange(\'year\')" ng-options="year for year in years"></select>'
-            ;
+                '<div class="col-xs-4"><select class="form-control" ng-model="date" ng-change="onChange(\'date\')" ng-options="date for date in dates"></select></div>' +
+                '<div class="col-xs-4"><select class="form-control" ng-model="month" ng-change="onChange(\'month\')" ng-options="month.index as month.name for month in months"></select></div>' +
+                '<div class="col-xs-4"><select class="form-control" ng-model="year" ng-change="onChange(\'year\')" ng-options="year for year in years"></select></div>'
+              ;
 
             return html;
         }
